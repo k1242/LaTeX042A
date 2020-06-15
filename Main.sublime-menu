@@ -1,0 +1,52 @@
+// 
+[
+    {
+        "caption": "KPlug",
+        "children":
+        [
+            {
+                "command": "open_file",
+                "args": {"file": "${packages}/User/KPlug/README.txt"},
+                "caption": "README"
+            },
+            { "caption": "-" },
+            {
+              "caption": "Settings",
+              "command": "open_file",
+              "args": {
+                "file": "${packages}/User/KPlug/KPlug.sublime-settings"
+              }
+            },
+            {
+                "command": "open_file",
+                "args": {
+                    "file": "${packages}/User/KPlug/Default.sublime-keymap"
+                },
+                "caption": "ShortCuts"
+            },
+            {
+                "command": "open_file",
+                "args": {
+                    "file": "${packages}/User/KPlug.py"
+                },
+                "caption": ".py file"
+            },
+            {
+                "command": "open_file",
+                "args": {
+                    "file": "${packages}/User/KPlug/tasks.txt"
+                },
+                "caption": "Tasks"
+            },
+            { "caption": "-" },
+            {
+                "command": "open_file",
+                "args": {
+                    "file": "${packages}/User/LaTeXTools.sublime-settings"
+                },
+                "caption": "TeX Settings"
+            },
+        ]
+    }
+]
+

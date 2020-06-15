@@ -1,0 +1,6 @@
+{
+    // false var
+    "test_var_false": false,
+    // true var
+    "test_var_true": true,
+}
