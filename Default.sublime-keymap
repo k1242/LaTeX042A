@@ -26,7 +26,9 @@
                     [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
                         { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
                         { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-                    ]}]} 
+                    ]}]}, 
+        "context":
+                    [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },] 
     },
     { "keys": ["ё", "4"], "command": "run_multiple_commands", "args": 
         {"commands": 
@@ -101,7 +103,24 @@
             { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
         ]
     },
+    { "keys": ["ъ", "р"], "command": "run_multiple_commands", "args": 
+        {"commands": 
+            [{"command": "changelayout",},
+                {"command": "insert_snippet", "args": {"contents": 
+                    "\\eqref"
+                }, "context":
+                    [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
+                        { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+                        { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },]}]} 
+    },
     { "keys": ["ъ", "т"], "command": "insert_snippet", "args": {"contents": "\\begin{to_thr} \n\t$0 \n\\end{to_thr}"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+        ]
+    },
+    { "keys": ["ъ", "ю"], "command": "insert_snippet", "args": {"contents": "use"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
             { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
@@ -121,6 +140,11 @@
         ]
     },
     { "keys": ["`", "`", "t"], "command": "insert_snippet", "args": {"contents": "\\text{$0}"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+        ]
+    },
+    { "keys": ["`", "."], "command": "insert_snippet", "args": {"contents": "\\ldots "}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
         ]
@@ -152,5 +176,6 @@
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
         ]
     },
-
+    { "keys": ["ъ", "ъ"], "command": "createfolder",
+    },
 ]
