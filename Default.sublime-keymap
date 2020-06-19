@@ -176,6 +176,6 @@
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
         ]
     },
-    { "keys": ["ъ", "ъ"], "command": "createfolder",
+    { "keys": ["ъ", "ш", "0"], "command": "createfolder",
     },
 ]
