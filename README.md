@@ -1,4 +1,7 @@
 # L042ATeX (LЪaTeX)
+
+The package is a set of plugins, snippets and shotcuts for simplifying using LaTeX for users writing text in Russian. Templates and snippets targeting specially for Russian, so package will be hardly useful for other users. Russian users could begin special environments, commands, etc. using Russian layout.
+
 ## Дисклеймер
 Этот пакет не для замены какого либо другого LaTeX пакета. Он предназначен для использования совместно с [LaTeXTools](https://github.com/SublimeText/LaTeXTools) и [LaTeXYZ](https://github.com/randy3k/LaTeXYZ) и возвышения процесса ввода в [Sublime Text](https://www.sublimetext.com/) до уровня комфортной погулки по давно близкому душе парку. 
 Мотивацией к написанию нижеизложенного послужили непреодолимая лень автора и дихотомия ракладки клавиатуры.
