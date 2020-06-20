@@ -1,138 +1,93 @@
 [
-    // Create a section
-    { "keys": ["s", "e", "c", "_"], "command": "insert_snippet", "args": {"contents": "\\section{$1}\n$0"}, "context":
+    // (+) create a section
+    { "keys": ["р", "_"], "command": "insert_snippet", "args": {"contents": "\\section{$1}\n$0"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
         ]
     },
-    { "keys": ["s", "u", "b", "_"], "command": "insert_snippet", "args": {"contents": "\\subsection{$1}\n$0"}, "context":
+    { "keys": ["п", "р", "_"], "command": "insert_snippet", "args": {"contents": "\\subsection{$1}\n$0"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
         ]
     },
-    { "keys": ["s", "s", "u", "b", "_"], "command": "insert_snippet", "args": {"contents": "\\subsubsection{$1}\n$0"}, "context":
+    { "keys": ["п", "п", "р", "_"], "command": "insert_snippet", "args": {"contents": "\\subsubsection{$1}\n$0"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
         ]
     },
 
 
-    // Go to the equation
-    { "keys": ["а", "о"], "command": "run_multiple_commands", "args": 
+    // (+) go to the equation
+    { "keys": ["а", "о"], "command": "run_multiple_commands", 
+        "args": 
         {
             "commands": 
-            [{"command": "changelayout"},
+            [   {"command": "changelayout"},
                 {"command": "insert_snippet", "args": {"contents": "\\$$0\\$"}, "context":
-                    [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-                        { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
-                        { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-                    ]}]}, 
+                    [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+                    ]}]
+        }, 
         "context":
-                    [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },] 
+                    [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }] 
     },
-    { "keys": ["ё", "4"], "command": "run_multiple_commands", "args": 
+    { "keys": ["у", "1"], "command": "run_multiple_commands", "args": 
         {"commands": 
             [{"command": "changelayout"},
                 {"command": "insert_snippet", "args": {"contents": 
                     "\\$\\$\n\t$0\n\\$\\$"
                 }, "context":
-                    [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-                        { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
-                        { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },]}]} 
+                    [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]}]} 
     },
-    { "keys": ["ъ", "ъ", "="], "command": "run_multiple_commands", "args": 
+    { "keys": ["у", "2"], "command": "run_multiple_commands", "args": 
+        {"commands": 
+            [{"command": "changelayout"},
+                {"command": "insert_snippet", "args": {"contents": 
+                    "\\begin{equation}\n\t$0\n\\end{equation}"
+                }, "context":
+                    [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]}]} 
+    },
+    { "keys": ["у", "3"], "command": "run_multiple_commands", "args": 
         {"commands": 
             [{"command": "changelayout"},
                 {"command": "insert_snippet", "args": {"contents": 
                     "\\begin{align}\n\t$0\n\\end{align}"
                 }, "context":
-                    [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-                        { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
-                        { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },]}]} 
+                    [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]}]} 
     },
 
 
-    // Go out from the equation
+    // go out from the equation
     { "keys": [" ", " "], "command": "goout",   "context":
-        [
-            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-        ]
-    },
-
-
-    // add "_{num}" after a letter
-    { "keys": ["1"], "command": "numtreatment", "args": {"numeral": 1}, "context":
-        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }]},
-    { "keys": ["2"], "command": "numtreatment", "args": {"numeral": 2}, "context":
-        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }]},
-    { "keys": ["3"], "command": "numtreatment", "args": {"numeral": 3}, "context":
-        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }]},
-    { "keys": ["4"], "command": "numtreatment", "args": {"numeral": 4}, "context":
-        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }]},
-    { "keys": ["5"], "command": "numtreatment", "args": {"numeral": 5}, "context":
-        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }]},
-    { "keys": ["6"], "command": "numtreatment", "args": {"numeral": 6}, "context":
-        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }]},
-    { "keys": ["7"], "command": "numtreatment", "args": {"numeral": 7}, "context":
-        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }]},
-    { "keys": ["8"], "command": "numtreatment", "args": {"numeral": 8}, "context":
-        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }]},
-    { "keys": ["9"], "command": "numtreatment", "args": {"numeral": 9}, "context":
-        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }]},
-    { "keys": ["0"], "command": "numtreatment", "args": {"numeral": 0}, "context":
         [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }]
     },
 
-    // Delete space before some chars
-    { "keys": ["."], "command": "deletespace", "args": {"char": "."}, "context":
-        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]},  
-    { "keys": [","], "command": "deletespace", "args": {"char": ","}, "context":
-        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]},
-    { "keys": ["!"], "command": "deletespace", "args": {"char": "!"}, "context":
-        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]}, 
-    { "keys": ["?"], "command": "deletespace", "args": {"char": "?"}, "context":
+
+    // begin lem\thr\def\...
+    { "keys": ["ъ", "ъ", "о"], "command": "insert_snippet", "args": {"contents": "\\begin{to_def} \n\t$0 \n\\end{to_def}"}, "context":
         [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
-    }, 
+    },
+    { "keys": ["ъ", "ъ", "л"], "command": "insert_snippet", "args": {"contents": "\\begin{to_lem} \n\t$0 \n\\end{to_lem}"}, "context":
+        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
+    },
+    { "keys": ["ъ", "ъ", "т"], "command": "insert_snippet", "args": {"contents": "\\begin{to_thr} \n\t$0 \n\\end{to_thr}"}, "context":
+        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
+    },
+    { "keys": ["ъ", "ъ", "к"], "command": "insert_snippet", "args": {"contents": "\\begin{to_com} \n\t$0 \n\\end{to_com}"}, "context":
+        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
+    },
+    { "keys": ["ъ", "ъ", "с"], "command": "insert_snippet", "args": {"contents": "\\begin{to_con} \n\t$0 \n\\end{to_con}"}, "context":
+        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
+    },
 
 
-    // And other.
-    { "keys": ["ъ", "о"], "command": "insert_snippet", "args": {"contents": "\\begin{to_def} \n\t$0 \n\\end{to_def}"}, "context":
-        [
-            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
-            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-        ]
-    },
-    { "keys": ["ъ", "р"], "command": "run_multiple_commands", "args": 
-        {"commands": 
-            [{"command": "changelayout",},
-                {"command": "insert_snippet", "args": {"contents": 
-                    "\\eqref"
-                }, "context":
-                    [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-                        { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
-                        { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },]}]} 
-    },
-    { "keys": ["ъ", "т"], "command": "insert_snippet", "args": {"contents": "\\begin{to_thr} \n\t$0 \n\\end{to_thr}"}, "context":
-        [
-            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
-            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-        ]
-    },
-    { "keys": ["ъ", "ю"], "command": "insert_snippet", "args": {"contents": "use"}, "context":
-        [
-            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
-            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-        ]
-    },
-    { "keys": ["ъ", "л"], "command": "insert_snippet", "args": {"contents": "\\begin{to_lem} \n\t$0 \n\\end{to_lem}"}, "context":
-        [
-            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
-            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
-        ]
+    // tiny inserts
+    { "keys": ["ъ", "р"], "command": "run_multiple_commands", 
+        "args": {
+            "commands": 
+                [   {"command": "changelayout",},
+                    {"command": "insert_snippet", 
+                        "args": {"contents": "\\eqref" }}]},
+        "context": [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
     },
     { "keys": ["`", "`", "h"], "command": "insert_snippet", "args": {"contents": "\\hspace{${1:0.5}cm}$0"}, "context":
         [
@@ -144,21 +99,11 @@
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
         ]
     },
-    { "keys": ["`", "."], "command": "insert_snippet", "args": {"contents": "\\ldots "}, "context":
-        [
-            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-        ]
-    },
     { "keys": ["ъ", "к"], "command": "addtextit", "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
         ]
     },
-    // { "keys": ["`", "`", "c", "l"], "command": "changelanguage", "context":
-    //     [
-    //         { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-    //     ]
-    // },
     { "keys": ["`", "9"], "command": "insert_snippet", "args": {"contents": "KPlug"}   
     },
     { "keys": ["`", "1"], "command": "addvector", "context":
@@ -176,6 +121,8 @@
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
         ]
     },
+
+    // create folders and files by template
     { "keys": ["ъ", "ш", "0"], "command": "createfolder",
     },
 ]
