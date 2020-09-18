@@ -1,6 +1,55 @@
-[
-    // (+) create a section
+ [
+
+// 1. local snippets:
+    { "keys": ["п", "н", "п"], "command": "insert_snippet", "args": {"contents": "принцип наименьшего действия"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    },    
+    { "keys": ["ъ", "у"], "command": "insert_snippet", "args": {"contents": "\\eqref{$1} $0"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    }, 
+    { "keys": ["\\", "П"], "command": "insert_snippet", "args": {"contents": "\\S $0"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    }, 
+    { "keys": ["H", "H"], "command": "insert_snippet", "args": {"contents": "\\mathscr{H} $0"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    }, 
+    { "keys": ["!", "="], "command": "insert_snippet", "args": {"contents": "\\neq"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    }, 
+    { "keys": ["E", "E"], "command": "insert_snippet", "args": {"contents": "\\mathscr{E} $0"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    }, 
+    { "keys": ["ъ", "ц", "к"], "command": "addenv", "args": {"env_name": "red"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    },
+    { "keys": ["ъ", "-"], "command": "insert_snippet", "args": {"contents": "----------------------------------------------------------------------"}, "context": //(+)
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.plain" }
+        ]
+    },
+
+
+// 2. (+) create a section
     { "keys": ["р", "_"], "command": "insert_snippet", "args": {"contents": "\\section{$1}\n$0"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    },
+    { "keys": ["р", "+"], "command": "insert_snippet", "args": {"contents": "\\section*{$1}\n$0"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
         ]
@@ -10,14 +59,24 @@
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
         ]
     },
+    { "keys": ["п", "р", "+"], "command": "insert_snippet", "args": {"contents": "\\subsection*{$1}\n$0"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    },
     { "keys": ["п", "п", "р", "_"], "command": "insert_snippet", "args": {"contents": "\\subsubsection{$1}\n$0"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    },
+    { "keys": ["п", "п", "р", "+"], "command": "insert_snippet", "args": {"contents": "\\subsubsection*{$1}\n$0"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
         ]
     },
 
 
-    // (+) go to the equation
+// 3. (+) go to the equation
     { "keys": ["а", "о"], "command": "run_multiple_commands", 
         "args": 
         {
@@ -54,15 +113,39 @@
                 }, "context":
                     [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]}]} 
     },
+    { "keys": ["у", "0"], "command": "run_multiple_commands", "args": 
+        {"commands": 
+            [{"command": "changelayout"},
+                {"command": "insert_snippet", "args": {"contents": 
+                    "\\begin{align*}\n\t$0\n\\end{align*}"
+                }, "context":
+                    [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]}]} 
+    },
 
-
-    // go out from the equation
-    { "keys": [" ", " "], "command": "goout",   "context":
-        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }]
+// 4. (+) create folders and files by template
+    { "keys": ["ъ", "ш", "0"], "command": "createfolder",
     },
 
 
-    // begin lem\thr\def\...
+// 5. (+) go out from the equation
+    { "keys": [" ", " "], "command": "goout",   "context": //(+)
+        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }]
+    },
+    { "keys": [" ", "enter"], "command": "run_multiple_commands", //(+)
+        "args": 
+            {"commands": 
+                [   
+                    {"command": "goout"},
+                    {"command": "insert_snippet", "args": {"contents": " "},},
+                ]
+            },
+        "context":[{"key":"selector","operator":"equal","operand":"text.tex.latex meta.environment.math"}]
+    },
+
+
+
+
+// 6. (+) begin lem\thr\def\...
     { "keys": ["ъ", "ъ", "о"], "command": "insert_snippet", "args": {"contents": "\\begin{to_def} \n\t$0 \n\\end{to_def}"}, "context":
         [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
     },
@@ -80,16 +163,77 @@
     },
 
 
-    // tiny inserts
-    { "keys": ["ъ", "р"], "command": "run_multiple_commands", 
-        "args": {
-            "commands": 
-                [   {"command": "changelayout",},
-                    {"command": "insert_snippet", 
-                        "args": {"contents": "\\eqref" }}]},
-        "context": [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
+// 7, (+) tiny inserts in the text mode
+    { "keys": ["ъ", "ъ", "н"], "command": "insert_snippet", "args": {"contents": "\\newpage\n"}, "context":
+        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
     },
-    { "keys": ["`", "`", "h"], "command": "insert_snippet", "args": {"contents": "\\hspace{${1:0.5}cm}$0"}, "context":
+    { "keys": ["ъ", "-", "о"], "command": "insert_snippet", "args": {"contents": "\\noindent\n"}, "context":
+        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
+    },
+    { "keys": ["ъ", "с"], "command": "insert_snippet", "args": {"contents": "\\href{${1:}}{${2:}} ${0:}"}, "context":
+        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
+    },
+    { "keys": ["ъ", "ф"], "command": "insert_snippet", "args": {"contents": "\\phantom{42}"}, "context":
+        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
+    },
+    { "keys": ["ъ", "з"], "command": "insert_snippet", "args": {"contents": "\\footnote{\n\t$1\n}"}, "context":
+        [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
+    },
+
+
+// 8. add style to text in textmode
+    { "keys": ["ъ", "к"], "command": "addenv", "args": {"env_name": "textit"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    },
+    { "keys": ["ъ", "ж"], "command": "addenv", "args": {"env_name": "textbf"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    },
+
+
+// 9. add style to text in mathmode
+    { "keys": ["1", "d"], "command": "addenv", "args": {"env_name": "dot"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+        ]
+    },
+    { "keys": ["2", "d"], "command": "addenv", "args": {"env_name": "ddot"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+        ]
+    },
+
+
+// 10. math snippets
+    { "keys": ["`", "1"], "command": "addenv", "args": {"env_name": "vc"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+        ]
+    },
+    { "keys": ["`", ":"], "command": "insert_snippet", "args": {"contents": "\\colon"}, "context": //(+)
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+        ]
+    },
+    { "keys": ["`", "+"], "command": "insert_snippet", "args": {"contents": "\\oplus"}, "context": //(+)
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+        ]
+    },
+    { "keys": ["`", "="], "command": "insert_snippet", "args": {"contents": "\\equiv"}, "context": //(+)
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+        ]
+    },
+    { "keys": ["`", "|"], "command": "insert_snippet", "args": {"contents": "\\bigg|_{${1:t_1}}^{${2:t_2}} $0"}, "context": //(+)
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+        ]
+    },    
+    { "keys": ["`", "`", "h"], "command": "insert_snippet", "args": {"contents": "\\hspace{0.${1:5}cm} $0"}, "context": //(+)
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
         ]
@@ -99,30 +243,42 @@
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
         ]
     },
-    { "keys": ["ъ", "к"], "command": "addtextit", "context":
+    { "keys": ["`", "`", "i"], "command": "insert_snippet", "args": {"contents": "\\int_{${1:t_1}}^{${2:t_2}} $0"}, "context": //(+)
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+        ]
+    },   
+    { "keys": ["1", "c"], "command": "insert_snippet", "args": {"contents": "\\const"}, "context": //(+)
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+        ]
+    },    
+    { "keys": ["*", "*"], "command": "insert_snippet", "args": {"contents": "\\times"}, "context": //(+)
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+        ]
+    },  
+
+
+// 11. tiny inserts
+    { "keys": ["ъ", "р"], "command": "run_multiple_commands", 
+        "args": {
+            "commands": 
+                [   {"command": "changelayout",},
+                    {"command": "insert_snippet", 
+                        "args": {"contents": "\\eqref" }}]},
+        "context": [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
+    },
+    { "keys": ["`", "9"], "command": "insert_snippet", "args": {"contents": "KPlug"}   
+    },
+    { "keys": ["|", "n", "f"], "command": "createfile", "args": {"folder": "parts"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
         ]
     },
-    { "keys": ["`", "9"], "command": "insert_snippet", "args": {"contents": "KPlug"}   
-    },
-    { "keys": ["`", "1"], "command": "addvector", "context":
+    { "keys": ["ъ", "и"], "command": "insert_snippet", "args": {"contents": "& "}, "context": //(+)
         [
-            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-        ]   
-    },
-    { "keys": ["`", ":"], "command": "insert_snippet", "args": {"contents": "\\colon"}, "context":
-        [
-            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
         ]
-    },
-    { "keys": ["`", "+"], "command": "insert_snippet", "args": {"contents": "\\oplus"}, "context":
-        [
-            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-        ]
-    },
-
-    // create folders and files by template
-    { "keys": ["ъ", "ш", "0"], "command": "createfolder",
     },
 ]

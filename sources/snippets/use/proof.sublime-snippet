@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+\begin{proof}[\$\triangle\$]
+    ${0:}
+\end{proof}
+]]></content>
+    <tabTrigger>ъъ</tabTrigger>
+    <scope>text.tex.latex</scope>
+</snippet>

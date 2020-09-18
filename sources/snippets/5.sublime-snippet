@@ -1,0 +1,6 @@
+<snippet><content><![CDATA[
+\overbrace{${1:}}_{${2:}}
+]]></content>
+	<tabTrigger>ove</tabTrigger>
+	<scope>text.tex.latex </scope>
+</snippet>

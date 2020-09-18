@@ -4,39 +4,90 @@
         "caption": "KPlug",
         "children":
         [
-            {
-                "command": "open_file",
-                "args": {"file": "${packages}/L042ATeX/README.txt"},
-                "caption": "README"
+            // {
+            //     "command": "open_file",
+            //     "args": {"file": "${packages}/User/L042ATeX/README.txt"},
+            //     "caption": "README"
+            // },
+            // { "caption": "-" },
+            // Python
+            {"caption":"Python",
+            "children":
+                [
+                    {
+                        "caption": "Kill .py process",
+                        "command": "stoppython",
+                    },
+                    {
+                        "command": "open_file",
+                        "args": {
+                            "file": "${packages}/User/python_set/Default.sublime-keymap"
+                        },
+                        "caption": "ShortCuts Python"
+                    },
+                ]
             },
+            // C++
+            {"caption": "C++",
+            "children":
+                [
+                    {
+                        "command": "open_file",
+                        "args": {
+                            "file": "${packages}/User/snippets_cpp/Default.sublime-keymap"
+                        },
+                        "caption": "ShortCuts C++"
+                    },
+                ]
+            },
+            // LaTeX
+            {"caption": "LaTeX",
+            "children":
+            [
+                {
+                    "command": "open_file",
+                    "args": {
+                        "file": "${packages}/User/L042ATeX/Default.sublime-keymap"
+                    },
+                    "caption": "ShortCuts LaTeX"
+                },
+                {
+                    "caption": "Snippets",
+                    "children":
+                        [
+                            {"caption": "Generate Snippets",
+                            "command": "generatesnippets",
+                            },
+                            {"caption": "Snippets List",
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/User/L042ATeX/sources/snippets_list.txt"
+                                },
+                            }
+                        ]
+                },
+                {
+                    "command": "open_file",
+                    "args": {
+                        "file": "${packages}/User/L042ATeX.py"
+                    },
+                    "caption": ".py file"
+                },
+            ]},
             { "caption": "-" },
             {
-              "caption": "Settings",
-              "command": "open_file",
-              "args": {
-                "file": "${packages}/L042ATeX/L042ATeX.sublime-settings"
-              }
-            },
-            {
                 "command": "open_file",
                 "args": {
-                    "file": "${packages}/L042ATeX/Default.sublime-keymap"
-                },
-                "caption": "ShortCuts"
-            },
-            {
-                "command": "open_file",
-                "args": {
-                    "file": "${packages}/L042ATeX/L042ATeX.py"
-                },
-                "caption": ".py file"
-            },
-            {
-                "command": "open_file",
-                "args": {
-                    "file": "${packages}/L042ATeX/tasks.txt"
+                    "file": "${packages}/User/L042ATeX/tasks.txt"
                 },
                 "caption": "Tasks"
+            },
+            {
+                "command": "open_file",
+                "args": {
+                    "file": "${packages}/User/L042ATeX/Main.sublime-menu"
+                },
+                "caption": "Menu"
             },
             { "caption": "-" },
         ]

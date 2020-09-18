@@ -1,6 +1,6 @@
 [
     {
         "caption": "Hello World!",
-        "command": "hi"
+        "command": "TEST_COMMAND"
     }
 ]

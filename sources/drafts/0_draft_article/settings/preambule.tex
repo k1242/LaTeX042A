@@ -1,5 +1,6 @@
 % file's preambule
 
+
 % connect packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[T2A]{fontenc}                   %!? закрепляет внутреннюю кодировку LaTeX
@@ -25,7 +26,10 @@
 \usepackage{ulem}                           %!  перечеркивание текста
 \usepackage{tikz}                           %!  высокоуровневые рисунки (кружочек)
 \usepackage{titling}                        %-  автоматическое заглавие 
+\usepackage{blindtext}                      %-  слепой текст
+\usepackage{fancyhdr}                       %   добавить верхний и нижний колонтитул
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 % add (renew) commands
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,6 +54,7 @@
 \newcommand{\xmark}{\ding{55}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 % some tikz commands
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter %%%%%%%%%%%%%%% КРУЖОЧЕК %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -70,6 +75,7 @@
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 % create environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newtheorem{to_thr}{Thr}[section]
@@ -81,14 +87,27 @@
 \newtheorem{to_def}[to_thr]{Def}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 % add some colors
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{grey}{HTML}{666666}
 \definecolor{linkcolor}{HTML}{0000CC}
 \definecolor{urlcolor}{HTML}{006600}
 \hypersetup{
-pdfstartview=FitH,  
-linkcolor=linkcolor,
-urlcolor=urlcolor, 
-colorlinks=true,
-citecolor=blue}
+    pdfstartview=FitH,  
+    linkcolor=linkcolor,
+    urlcolor=urlcolor, 
+    colorlinks=true,
+    citecolor=blue}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% add page header
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \pagestyle{fancy}
+% \fancyhf{}
+% \fancyhead[RE,LO]{\textsc{Ф\raisebox{-1.5pt}{и}з\TeX}}
+% \fancyhead[LE,RO]{НАЗВАНИЕ}
+% \fancyhead[CO,CE]{\leftmark}
+% \fancyfoot[LE,RO]{\textcolor{grey}{\texttt{\thepage}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

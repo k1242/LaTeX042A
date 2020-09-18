@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+\begin{columns}
+    \begin{column}{0.5\textwidth}
+        
+    \end{column}
+    \begin{column}{0.5\textwidth}
+        
+    \end{column}
+\end{columns} 
+]]></content>
+<tabTrigger>ъъ</tabTrigger>
+<scope>text.tex.latex</scope>
+</snippet>

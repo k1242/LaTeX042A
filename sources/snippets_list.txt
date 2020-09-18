@@ -1,0 +1,56 @@
+// press "snip" and "TAB" to start
+
+----- TIMED SNIPPETS -----
+
+snip
+
+----- MATH SNIPPETS -----
+
+trigger: fr
+                                                ..[[
+\\frac{$1}{$2} $0
+                                                ]]..
+
+trigger: o
+                                                ..[[
+\\oint
+                                                ]]..
+
+
+trigger: app
+                                                ..[[
+\\approx
+                                                ]]..
+
+trigger: frp
+                                                ..[[
+\\frac{\\partial ${1:}}{\\partial ${2:}} $0
+                                                ]]..
+
+trigger: und
+                                                ..[[
+\underbrace{${1:}}_{${2:}}
+                                                ]]..
+
+trigger: ove
+                                                ..[[
+\overbrace{${1:}}_{${2:}}
+                                                ]]..
+
+trigger: alligned
+                                                ..[[
+\\left\\{\begin{aligned}
+    ${1:x &= }
+    ${2:y &= }
+\\end{aligned}\\right.
+                                                ]]..
+
+trigger: rsp
+                                                            ..[[
+\\hspace{0.${1:5}cm} \\Rightarrow \\hspace{0.${1:5}cm} ${0}
+                                                            ]]..
+
+trigger: s
+                                                ..[[
+\\sum
+                                                ]]..

@@ -12,13 +12,13 @@ path_change_layout = "\\sources\\vbs\\change_layout.vbs"
 path_close_recent_file = "\\sources\\vbs\\close_recent_file.vbs"
 
 
-env_names_list = ["align", "equation"]
+env_names_list = ["align", "align*", "equation"]
 
 endings_list = [
     " ", "\n", "\t",
     "[", "(", "{",
     "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", 
-    "`", "$", "^"
+    "`", "$", "^", "~"
 ]
 # exceptions = ["_", "-", "+", "=", "*", "/"]
 
@@ -51,7 +51,8 @@ class AddenvCommand(sublime_plugin.TextCommand):
 
 class GooutCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        os.startfile(change_language_way)
+        path = sublime.packages_path() + "\\" + user_path + package_name + path_change_layout
+        os.startfile(path)
         sel = [(s.begin(), s.end()) for s in self.view.sel()]
         num = sel[0][0]
         flag = 0

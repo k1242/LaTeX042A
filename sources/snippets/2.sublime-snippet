@@ -1,0 +1,6 @@
+<snippet><content><![CDATA[
+\\approx
+]]></content>
+	<tabTrigger>app</tabTrigger>
+	<scope>text.tex.latex </scope>
+</snippet>
