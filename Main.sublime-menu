@@ -1,16 +1,10 @@
 // 
 [
     {
-        "caption": "KPlug",
+        "caption": "L042ATeX",
         "children":
         [
-            // {
-            //     "command": "open_file",
-            //     "args": {"file": "${packages}/User/L042ATeX/README.txt"},
-            //     "caption": "README"
-            // },
-            // { "caption": "-" },
-            // Python
+
             {"caption":"Python",
             "children":
                 [
@@ -45,19 +39,18 @@
             "children":
             [
                 {
-                    "command": "open_file",
-                    "args": {
-                        "file": "${packages}/User/L042ATeX/Default.sublime-keymap"
-                    },
-                    "caption": "ShortCuts LaTeX"
+                    "command": "globalupdate",
+                    "caption": "Update sources"
                 },
+                {"caption":"-"}, 
                 {
                     "caption": "Snippets",
                     "children":
                         [
-                            {"caption": "Generate Snippets",
-                            "command": "generatesnippets",
-                            },
+                            // {"caption": "Generate Snippets",
+                            // "command": "runpyfile",
+                            // "args": {"file_name": "snippets_generator"}
+                            // },
                             {"caption": "Snippets List",
                                 "command": "open_file",
                                 "args": {
@@ -67,9 +60,22 @@
                         ]
                 },
                 {
+                    "caption": "Keymaps",
+                    "children":
+                        [
+                            // {"caption": "Generate Keymaps",
+                            // "command": "runpyfile",
+                            // "args": {"file_name": "keymaps_generator"}
+                            // },
+                            {"caption": "Keymaps List",
+                                "command": "openkeymaps",
+                            }
+                        ]
+                },
+                {
                     "command": "open_file",
                     "args": {
-                        "file": "${packages}/User/L042ATeX.py"
+                        "file": "${packages}/User/L042ATeX/sources/L042ATeX.py"
                     },
                     "caption": ".py file"
                 },
@@ -90,6 +96,13 @@
                 "caption": "Menu"
             },
             { "caption": "-" },
+            {
+                "command": "open_file",
+                "args": {
+                    "file": "${packages}/User/L042ATeX/sources/plugin_generator.py"
+                },
+                "caption": "Let's start!",
+            }
         ]
     }
 ]

@@ -1,9 +1,6 @@
 <snippet><content><![CDATA[
-\\left\\{\begin{aligned}
-    ${1:x &= }
-    ${2:y &= }
-\\end{aligned}\\right.
+\vc{\mathrm{K}}
 ]]></content>
-	<tabTrigger>alligned</tabTrigger>
+	<tabTrigger>KK</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

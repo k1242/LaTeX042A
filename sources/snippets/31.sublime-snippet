@@ -1,6 +1,8 @@
 <snippet><content><![CDATA[
-\frac{\partial^2 $1}{\partial $2 \partial $3} $0
+\\begin{center}
+    $0
+\\end{center}
 ]]></content>
-	<tabTrigger>frp2</tabTrigger>
+	<tabTrigger>cen</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

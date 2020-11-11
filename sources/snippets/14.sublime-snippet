@@ -1,6 +1,6 @@
 <snippet><content><![CDATA[
-\frac{\partial^2 $1}{\partial $2 \partial $3} $0
+\\approx
 ]]></content>
-	<tabTrigger>frp2</tabTrigger>
+	<tabTrigger>app</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

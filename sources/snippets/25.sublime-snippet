@@ -1,0 +1,10 @@
+<snippet><content><![CDATA[
+\begin{pmatrix}
+    $1 & $2 & $3 \\\\
+    $2 & $4 & $5 \\\\
+    $3 & $5 & $6 \\\\
+\end{pmatrix}
+]]></content>
+	<tabTrigger>symat</tabTrigger>
+	<scope>text.tex.latex </scope>
+</snippet>

@@ -2,9 +2,64 @@
 
 ----- TIMED SNIPPETS -----
 
-snip
+
+trigger: box
+                                                ..[[
+\\boxed{
+    $0
+}
+                                                ]]..
+
+trigger: set
+                                                ..[[
+\set{${1:u}}{${2:k}}$0
+                                                ]]..
+
+trigger: i
+                                                ..[[
+\int
+                                                ]]..
+
+trigger: frp2
+                                                ..[[
+\frac{\partial^2 $1}{\partial $2 \partial $3} $0
+                                                ]]..
+
+
+trigger: con
+                                                ..[[
+\\hspace{0.5cm} \\overset{$1}{\\underset{\\Longrightarrow}{}} \\hspace{0.5cm} 
+$0
+                                                ]]..
+
+trigger: ww
+                                                ..[[
+\vc{\mathrm{w}}
+                                                ]]..
+
+trigger: KK
+                                                ..[[
+\vc{\mathrm{K}}
+                                                ]]..
 
 ----- MATH SNIPPETS -----
+
+trigger: overset
+                                                ..[[
+\overset{${1:\varphi}}{\longrightarrow}
+                                                ]]..
+
+trigger: 0
+                                                ..[[
+\circ
+                                                ]]..
+
+
+trigger: R
+                                                ..[[
+\Rightarrow
+                                                ]]..
+
 
 trigger: fr
                                                 ..[[
@@ -32,16 +87,21 @@ trigger: und
 \underbrace{${1:}}_{${2:}}
                                                 ]]..
 
-trigger: ove
+trigger: ovb
                                                 ..[[
 \overbrace{${1:}}_{${2:}}
                                                 ]]..
 
-trigger: alligned
+trigger: ovs
+                                                ..[[
+\overset{${1:\mathrm\{def\}}}{${2:=}} $0
+                                                ]]..
+
+trigger: aligned
                                                 ..[[
 \\left\\{\begin{aligned}
-    ${1:x &= }
-    ${2:y &= }
+    $1
+    
 \\end{aligned}\\right.
                                                 ]]..
 
@@ -53,4 +113,99 @@ trigger: rsp
 trigger: s
                                                 ..[[
 \\sum
+                                                ]]..
+
+
+----- MATRIX SNIPPETS -----
+
+trigger: skmat
+                                                ..[[
+\skmat{${1:3}}{${2:}}{${3:}}{${4:}}
+                                                ]]..
+
+trigger: dmat
+                                                ..[[
+\dmat{${1:3}}{${2:}}{${3:}}{${4:}}
+                                                ]]..
+
+trigger: cmat
+                                                ..[[
+\begin{pmatrix}
+    $1 & $2 & $3 \\\\
+    $4 & $5 & $6 \\\\
+    $7 & $8 & $9 \\\\
+\end{pmatrix}
+                                                ]]..
+
+trigger: symat
+                                                ..[[
+\begin{pmatrix}
+    $1 & $2 & $3 \\\\
+    $2 & $4 & $5 \\\\
+    $3 & $5 & $6 \\\\
+\end{pmatrix}
+                                                ]]..
+
+trigger: cvec
+                                                ..[[
+\left($1,\ $2,\ $3 \right)${4:\T} $0
+                                                ]]..
+
+----- TABLE SNIPPETS -----
+
+trigger: mr
+                                                ..[[
+\multirow{${1:2}}{*}{$0}
+                                                ]]..
+
+trigger: mc
+                                                ..[[
+\multicolumn{${1:2}}{${2:c}}{$0}
+                                                ]]..
+
+
+----- STRUCTURE SNIPPETS ---------
+
+trigger: proof
+                                                ..[[
+\\begin{proof}[\$\\triangle\$]
+    \\begin{minipage}[t]{0.9\\textwidth}
+        \\begin{enumerate}[label = \\Roman*.]
+            \\item $0
+        \\end{enumerate}
+    \\end{minipage}
+
+\\phantom{42}
+\\end{proof}
+                                                ]]..
+
+trigger: fig
+                                                ..[[
+\\begin{figure}[h]
+    \\centering
+    \\includegraphics[width=0.5\\textwidth]${1:}
+    %\\caption{$2}
+    %\\label{fig:$3}
+\\end{figure}
+$0
+                                                ]]..
+
+trigger: cen
+                                                ..[[
+\\begin{center}
+    $0
+\\end{center}
+                                                ]]..
+
+trigger: wrapfig
+                                                ..[[
+\\begin{wrapfigure}{r}{0.4\\textwidth}
+  \\begin{center}
+        \\vspace{-5 mm}
+        \\includegraphics[width=0.9\\linewidth]$1
+  \\end{center}
+    %\\caption{$2}
+    %\\label{fig:$3}
+\\end{wrapfigure}
+$0
                                                 ]]..

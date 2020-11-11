@@ -1,0 +1,7 @@
+[  
+    {  
+        "command": "addenv",
+        "caption": "Add Vector",
+        "args": {"env_name":"test"}
+    }  
+]  

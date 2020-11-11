@@ -1,0 +1,13 @@
+// style keymaps
+
+{ "keys": ["ъ", "к"], "command": "addenv", "args": {"env_name": "textit"}, "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+    ]
+},
+
+{ "keys": ["ъ", "ж"], "command": "addenv", "args": {"env_name": "textbf"}, "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+    ]
+},

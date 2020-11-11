@@ -1,6 +1,6 @@
 <snippet><content><![CDATA[
-\\approx
+\int
 ]]></content>
-	<tabTrigger>app</tabTrigger>
+	<tabTrigger>i</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

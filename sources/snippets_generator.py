@@ -1,11 +1,12 @@
 import re
 from os import listdir
 import ctypes
+from pathlib import Path
 
 snip_start = "..[["
 snip_end = "]].."
 
-prefix = "C:\\Users\\aleks\\AppData\\Roaming\\Sublime Text 3\\Packages\\User\\L042ATeX\\sources\\"
+prefix = str(Path(__file__).parents[0]) + "\\"
 snippets_list_path = prefix+"snippets_list.txt"
 snippets_path = prefix + "snippets\\"
 

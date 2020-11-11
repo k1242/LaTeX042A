@@ -1,6 +1,7 @@
 <snippet><content><![CDATA[
-\underbrace{${1:}}_{${2:}}
+\\hspace{0.5cm} \\overset{$1}{\\underset{\\Longrightarrow}{}} \\hspace{0.5cm} 
+$0
 ]]></content>
-	<tabTrigger>und</tabTrigger>
+	<tabTrigger>con</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

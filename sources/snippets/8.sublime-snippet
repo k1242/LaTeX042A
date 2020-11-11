@@ -1,6 +1,6 @@
 <snippet><content><![CDATA[
-\\sum
+\circ
 ]]></content>
-	<tabTrigger>s</tabTrigger>
+	<tabTrigger>0</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

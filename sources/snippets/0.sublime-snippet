@@ -1,6 +1,8 @@
 <snippet><content><![CDATA[
-\\frac{$1}{$2} $0
+\\boxed{
+    $0
+}
 ]]></content>
-	<tabTrigger>fr</tabTrigger>
+	<tabTrigger>box</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

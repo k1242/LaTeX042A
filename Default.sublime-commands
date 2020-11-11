@@ -1,0 +1,5 @@
+[
+    // { "caption": "test_command", "command": "testsettings" },
+    { "caption": "L042ATeX: start notes project", "command": "createfolder"},
+    { "caption": "L042ATeX: update SVG in project", "command": "updatesvg"},
+]

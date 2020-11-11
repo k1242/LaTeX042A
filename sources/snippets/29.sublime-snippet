@@ -1,0 +1,14 @@
+<snippet><content><![CDATA[
+\\begin{proof}[\$\\triangle\$]
+    \\begin{minipage}[t]{0.9\\textwidth}
+        \\begin{enumerate}[label = \\Roman*.]
+            \\item $0
+        \\end{enumerate}
+    \\end{minipage}
+
+\\phantom{42}
+\\end{proof}
+]]></content>
+	<tabTrigger>proof</tabTrigger>
+	<scope>text.tex.latex </scope>
+</snippet>
