@@ -1,34 +1,34 @@
 [
-    { "caption": "LaTeXPhys: open keymaps folder", 
+    { "caption": "LaTeX042A: open keymaps folder", 
         "command": "openfolder", 
         "args"   : {"folder_name" : "sources/keymaps"}
     },
     {
-        "caption": "LaTeXPhys: open menu",
+        "caption": "LaTeX042A: open menu",
         "command": "open_file",
-        "args": {"file": "${packages}/LaTeXPhys/Main.sublime-menu"},
+        "args": {"file": "${packages}/LaTeX042A/Main.sublime-menu"},
     },
     {
-        "caption": "LaTeXPhys: open .py file",
+        "caption": "LaTeX042A: open .py file",
         "command": "open_file",
-        "args": {"file": "${packages}/LaTeXPhys/commands.py"},
+        "args": {"file": "${packages}/LaTeX042A/commands.py"},
     },
     {
-        "caption": "LaTeXPhys: open commands",
+        "caption": "LaTeX042A: open commands",
         "command": "open_file",
-        "args": {"file": "${packages}/LaTeXPhys/Default.sublime-commands"},
+        "args": {"file": "${packages}/LaTeX042A/Default.sublime-commands"},
     },
     {
-        "caption": "LaTeXPhys: open settings",
+        "caption": "LaTeX042A: open settings",
         "command": "open_file",
-        "args": {"file": "${packages}/LaTeXPhys/LaTeXPhys.sublime-settings"},
+        "args": {"file": "${packages}/LaTeX042A/LaTeX042A.sublime-settings"},
     },
     {
         "command": "globalupdate",
-        "caption": "LaTeXPhys: update resources"
+        "caption": "LaTeX042A: update resources"
     },
     {
-        "caption": "LaTeXPhys: test command",
+        "caption": "LaTeX042A: test command",
         "command": "changelayout"
     },
 ]
