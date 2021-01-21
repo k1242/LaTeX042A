@@ -9,7 +9,7 @@ The package is a set of plugins, snippets and shotcuts for simplifying using LaT
 Всё написанное было удобно конкретно автору написанного, так что возможна физическая боль от восприятия ниже представленной "оптимизации" процесса работы с LaTeX. Любые комментарии и предложения просьба писать [мне](https://vk.com/ka1242).
 
 ## Установка
-Для установки достаточно использовать Package Control. 
+Для установки необходим Package Control. Откройте окно списка доступных функций через <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>p</kbd> и введите ```Package Control: Add Repository```. В появившееся снизу окошко вставьте ссылку на этот репозиторий ```https://github.com/k1242/LaTeX042A```. Теперь аналогично в <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>p</kbd>, введите ```Package Control: Install Package```, и найдите этот пакет: ```LaTeX042A```. 
 
 ## Сниппеты
 
