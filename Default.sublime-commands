@@ -11,7 +11,7 @@
     {
         "caption": "LaTeX042A: open .py file",
         "command": "open_file",
-        "args": {"file": "${packages}/LaTeX042A/commands.py"},
+        "args": {"file": "${packages}/LaTeX042A/support.py"},
     },
     {
         "caption": "LaTeX042A: open commands",
