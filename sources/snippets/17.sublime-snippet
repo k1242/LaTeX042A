@@ -1,6 +1,6 @@
 <snippet><content><![CDATA[
-\overbrace{${1:}}_{${2:}}
+\overset{${1:\mathrm\{def\}}}{${2:=}} $0
 ]]></content>
-	<tabTrigger>ovb</tabTrigger>
+	<tabTrigger>ovs</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

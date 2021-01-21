@@ -1,299 +1,103 @@
 [
-	// tiny inserts in the text mode
-	
-	{ "keys": ["ъ", "ъ", "н"], "command": "insert_snippet", "args": {"contents": "\\newpage\n"}, "context":
-	    [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
-	},
-	
-	{ "keys": ["ъ", "-", "о"], "command": "insert_snippet", "args": {"contents": "\\noindent\n"}, "context":
-	    [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
-	},
-	
-	{ "keys": ["ъ", "с"], "command": "insert_snippet", "args": {"contents": "\\href{${1:}}{${2:}} ${0:}"}, "context":
-	    [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
-	},
-	
-	{ "keys": ["ъ", "ф"], "command": "insert_snippet", "args": {"contents": "\\phantom{42}"}, "context":
-	    [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
-	},
-	
-	{ "keys": ["ъ", "з"], "command": "insert_snippet", "args": {"contents": "\\footnote{\n\t$1\n}"}, "context":
-	    [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
-	},
 	
 
 
-	// leave equation
+	// math keymaps
 	
-	{ "keys": [" ", " "], "command": "goout",   "context": //(+)
-	    [{ 
-	        "key": "selector", "operator": "equal", 
-	        "operand": "text.tex.latex meta.environment.math.inline.dollar.latex" 
-	    }]
-	},
-	
-	{ "keys": [" ", "enter"], "command": "run_multiple_commands", //(+)
-	    "args": 
-	        {"commands": 
-	            [   
-	                {"command": "goout"},
-	                {"command": "insert_snippet", "args": {"contents": " "},},
-	            ]
-	        },
-	    "context":
-	    [{
-	        "key":"selector","operator":"equal",
-	        "operand":"text.tex.latex meta.environment.math.inline.dollar.latex"
-	    }]
-	},	
-
-
-	// local keymaps
-	
-	
-	{ "keys": ["п", "н", "п"], "command": "insert_snippet", "args": {"contents": "принцип наименьшего действия"}, "context":
+	{ "keys": ["'", "v"], "command": "addenv", "args": {"env_name": "vc"}, "context":
 	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
-	},    
-	{ "keys": ["ъ", "у"], "command": "insert_snippet", "args": {"contents": "\\eqref{$1} $0"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
-	}, 
-	{ "keys": ["\\", "П"], "command": "insert_snippet", "args": {"contents": "\\S $0"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
-	}, 
-	{ "keys": ["H", "H"], "command": "insert_snippet", "args": {"contents": "\\mathscr{H} $0"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
-	}, 
-	{ "keys": ["!", "="], "command": "insert_snippet", "args": {"contents": "\\neq"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
-	}, 
-	{ "keys": ["E", "E"], "command": "insert_snippet", "args": {"contents": "\\mathscr{E} $0"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
-	}, 
-	{ "keys": ["ъ", "ц", "к"], "command": "addenv", "args": {"env_name": "red"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
 	    ]
 	},
-	{ "keys": ["ъ", "-"], "command": "insert_snippet", "args": {"contents": "----------------------------------------------------------------------"}, "context": //(+)
+	{ "keys": ["'", "s", "v"], "command": "addenv", "args": {"env_name": "smallvc"}, "context":
 	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.plain" }
+	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+	    ]
+	},
+	{ "keys": ["'", "V"], "command": "addenv", "args": {"env_name": "vv"}, "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+	    ]
+	},
+	{ "keys": ["'", "h"], "command": "addenv", "args": {"env_name": "hat"}, "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+	    ]
+	},
+	{ "keys": ["'", "t"], "command": "addenv", "args": {"env_name": "tilde"}, "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+	    ]
+	},
+	{ "keys": ["'", "b"], "command": "addenv", "args": {"env_name": "bar"}, "context":
+	    [
+	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
 	    ]
 	},
 	
-
-
-	// add style to text in mathmode
 	
 	{ "keys": ["1", "d"], "command": "addenv", "args": {"env_name": "dot"}, "context":
 	    [
 	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
 	    ]
 	},
-	
 	{ "keys": ["2", "d"], "command": "addenv", "args": {"env_name": "ddot"}, "context":
 	    [
 	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
 	    ]
-	},	
-
-
-	// math keymaps
-	
-	{ "keys": ["`", "1"], "command": "addenv", "args": {"env_name": "vc"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-	    ]
-	},
-	{ "keys": ["`", "v"], "command": "addenv", "args": {"env_name": "vv"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-	    ]
-	},
-	{ "keys": ["`", ":"], "command": "insert_snippet", "args": {"contents": "\\colon"}, "context": //(+)
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-	    ]
-	},
-	{ "keys": ["`", "+"], "command": "insert_snippet", "args": {"contents": "\\oplus"}, "context": //(+)
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-	    ]
-	},
-	{ "keys": ["`", "="], "command": "insert_snippet", "args": {"contents": "\\equiv"}, "context": //(+)
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-	    ]
-	},
-	{ "keys": ["`", "|"], "command": "insert_snippet", "args": {"contents": "\\bigg|_{${1:t_1}}^{${2:t_2}} $0"}, "context": //(+)
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-	    ]
-	},    
-	{ "keys": ["`", "`", "h"], "command": "insert_snippet", "args": {"contents": "\\hspace{0.${1:5}cm} $0"}, "context": //(+)
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
-	},
-	{ "keys": ["`", "`", "t"], "command": "insert_snippet", "args": {"contents": "\\text{$0}"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-	    ]
-	},
-	{ "keys": ["`", "`", "i"], "command": "insert_snippet", "args": {"contents": "\\int_{${1:t_1}}^{${2:t_2}} $0"}, "context": //(+)
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-	    ]
-	},   
-	{ "keys": ["1", "c"], "command": "insert_snippet", "args": {"contents": "\\const"}, "context": //(+)
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-	    ]
-	},    
-	{ "keys": ["*", "*"], "command": "insert_snippet", "args": {"contents": "\\times"}, "context": //(+)
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
-	    ]
-	},  
-	
-
-
-	// create a section
-	
-	{ "keys": ["р", "_"], "command": "insert_snippet", "args": {"contents": "\\section{$1}\n$0"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
 	},
 	
-	{ "keys": ["р", "+"], "command": "insert_snippet", "args": {"contents": "\\section*{$1}\n$0"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
-	},
-	
-	{ "keys": ["п", "р", "_"], "command": "insert_snippet", "args": {"contents": "\\subsection{$1}\n$0"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
-	},
-	
-	{ "keys": ["п", "р", "+"], "command": "insert_snippet", "args": {"contents": "\\subsection*{$1}\n$0"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
-	},
-	
-	{ "keys": ["п", "п", "р", "_"], "command": "insert_snippet", "args": {"contents": "\\subsubsection{$1}\n$0"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
-	},
-	
-	{ "keys": ["п", "п", "р", "+"], "command": "insert_snippet", "args": {"contents": "\\subsubsection*{$1}\n$0"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
-	},	
 
 
 	// start equation env
+	{ "keys": ["а", "о"], "command": "run_macro_file",   //(+)
+	    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_tiny_equation.sublime-macro"},
+	},
 	
-	{ "keys": ["а", "о"], "command": "run_multiple_commands", 
-	    "args": 
-	    {
-	        "commands": 
-	        [   {"command": "changelayout"},
-	            {"command": "insert_snippet", "args": {"contents": "\\$$0\\$"}, "context":
-	                [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	                ]}]
-	    }, 
+	
+	// leave equation without space
+	{ "keys": [" ", " "], "command": "run_macro_file",   //(+)
+	    "args": {"file": "Packages/LaTeXPhys/sources/Macros/leave_equation_v1.sublime-macro"},
 	    "context":
-	                [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }] 
+	    [{ 
+	        "key": "selector", "operator": "equal", 
+	        "operand": "text.tex.latex meta.environment.math.inline" 
+	    }]
 	},
 	
-	{ "keys": ["у", "1"], "command": "run_multiple_commands", "args": 
-	    {"commands": 
-	        [{"command": "changelayout"},
-	            {"command": "insert_snippet", "args": {"contents": 
-	                "\\begin{equation*}\n\t$0\n\\end{equation*}"
-	            }, "context":
-	                [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]}]} 
+	
+	// leave equation with space
+	{ "keys": [" ", "enter"], "command": "run_macro_file",   //(+)
+	    "args": {"file": "Packages/LaTeXPhys/sources/Macros/leave_equation_v2.sublime-macro"},
+	    "context":
+	    [{ 
+	        "key": "selector", "operator": "equal", 
+	        "operand": "text.tex.latex meta.environment.math.inline" 
+	    }]
 	},
 	
-	{ "keys": ["у", "2"], "command": "run_multiple_commands", "args": 
-	    {"commands": 
-	        [{"command": "changelayout"},
-	            {"command": "insert_snippet", "args": {"contents": 
-	                "\\begin{equation}\n\t$0\n\\end{equation}"
-	            }, "context":
-	                [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]}]} 
+	
+	
+	// ...
+	{ "keys": ["у", "1"], "command": "run_macro_file",   //(+)
+	    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_equation_eq_ru_eng.sublime-macro"},
+	},
+	{ "keys": ["e", "1"], "command": "run_macro_file",   //(+)
+	    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_equation_eq_eng_eng.sublime-macro"},
 	},
 	
-	{ "keys": ["у", "3"], "command": "run_multiple_commands", "args": 
-	    {"commands": 
-	        [{"command": "changelayout"},
-	            {"command": "insert_snippet", "args": {"contents": 
-	                "\\begin{align}\n\t$0\n\\end{align}"
-	            }, "context":
-	                [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]}]} 
+	{ "keys": ["у", "2"], "command": "run_macro_file",   //(+)
+	    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_equation_al_ru_eng.sublime-macro"},
+	},
+	{ "keys": ["e", "2"], "command": "run_macro_file",   //(+)
+	    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_equation_al_eng_eng.sublime-macro"},
 	},
 	
-	{ "keys": ["у", "4"], "command": "run_multiple_commands", "args": 
-	    {"commands": 
-	        [{"command": "changelayout"},
-	            {"command": "insert_snippet", "args": {"contents": 
-	                "\\begin{align*}\n\t$0\n\\end{align*}"
-	            }, "context":
-	                [   { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]}]} 
-	},	
-
-
-	// begin lem\thr\def\...
-	
-	{ "keys": ["ъ", "ъ", "о"], "command": "insert_snippet", "args": {"contents": "\\begin{to_def} \n\t$0 \n\\end{to_def}"}, "context":
-	    [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
+	{ "keys": ["у", "3"], "command": "run_macro_file",   //(+)
+	    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_equation_ga_ru_eng.sublime-macro"},
 	},
-	{ "keys": ["ъ", "ъ", "з"], "command": "insert_snippet", "args": {"contents": "\\begin{to_law} \n\t$0 \n\\end{to_law}"}, "context":
-	    [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
-	},
-	{ "keys": ["ъ", "ъ", "л"], "command": "insert_snippet", "args": {"contents": "\\begin{to_lem} \n\t$0 \n\\end{to_lem}"}, "context":
-	    [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
-	},
-	{ "keys": ["ъ", "ъ", "т"], "command": "insert_snippet", "args": {"contents": "\\begin{to_thr} \n\t$0 \n\\end{to_thr}"}, "context":
-	    [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
-	},
-	{ "keys": ["ъ", "ъ", "к"], "command": "insert_snippet", "args": {"contents": "\\begin{to_com} \n\t$0 \n\\end{to_com}"}, "context":
-	    [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
-	},
-	{ "keys": ["ъ", "ъ", "с"], "command": "insert_snippet", "args": {"contents": "\\begin{to_con} \n\t$0 \n\\end{to_con}"}, "context":
-	    [{ "key": "selector", "operator": "equal", "operand": "text.tex.latex" }]
-	},	
-
-
-	// style keymaps
-	
-	{ "keys": ["ъ", "к"], "command": "addenv", "args": {"env_name": "textit"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
-	},
-	
-	{ "keys": ["ъ", "ж"], "command": "addenv", "args": {"env_name": "textbf"}, "context":
-	    [
-	        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
-	    ]
+	{ "keys": ["e", "3"], "command": "run_macro_file",   //(+)
+	    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_equation_ga_eng_eng.sublime-macro"},
 	},
 	
 

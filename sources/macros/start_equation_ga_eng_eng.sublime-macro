@@ -1,0 +1,12 @@
+[
+	{
+		"command": "insert_snippet", 
+        "args": {"contents": 
+            "\\begin{gather${1:*}}\n\t$0\n\\end{gather${1:*}}"
+        }, 
+        "context": [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+	},
+]
+

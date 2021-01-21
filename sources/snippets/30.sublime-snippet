@@ -1,12 +1,8 @@
 <snippet><content><![CDATA[
-\\begin{figure}[h]
-    \\centering
-    \\includegraphics[width=0.5\\textwidth]${1:}
-    %\\caption{$2}
-    %\\label{fig:$3}
-\\end{figure}
-$0
+\\begin{center}
+    $0
+\\end{center}
 ]]></content>
-	<tabTrigger>fig</tabTrigger>
+	<tabTrigger>cen</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

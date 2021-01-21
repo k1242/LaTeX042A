@@ -1,6 +1,6 @@
 <snippet><content><![CDATA[
-\overset{${1:\varphi}}{\longrightarrow}
+\mapsto
 ]]></content>
-	<tabTrigger>oa</tabTrigger>
+	<tabTrigger>map</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

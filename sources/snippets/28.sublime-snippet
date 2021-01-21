@@ -1,6 +1,8 @@
 <snippet><content><![CDATA[
-\multicolumn{${1:2}}{${2:c}}{$0}
+\\begin{proof}[\$\\triangle\$]
+$0
+\\end{proof}
 ]]></content>
-	<tabTrigger>mc</tabTrigger>
+	<tabTrigger>proof</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

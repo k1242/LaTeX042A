@@ -1,8 +1,14 @@
 <snippet><content><![CDATA[
-\\begin{center}
-    $0
-\\end{center}
+\\begin{wrapfigure}{r}{0.4\\textwidth}
+  \\begin{center}
+        \\vspace{-5 mm}
+        \\includegraphics[width=0.9\\linewidth]$1
+  \\end{center}
+    %\\caption{$2}
+    %\\label{fig:$3}
+\\end{wrapfigure}
+$0
 ]]></content>
-	<tabTrigger>cen</tabTrigger>
+	<tabTrigger>wrapfig</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

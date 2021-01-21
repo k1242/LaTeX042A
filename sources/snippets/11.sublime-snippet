@@ -1,6 +1,6 @@
 <snippet><content><![CDATA[
-\\textnormal{$0}
+\circ
 ]]></content>
-	<tabTrigger>tn</tabTrigger>
+	<tabTrigger>0</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

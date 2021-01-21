@@ -1,0 +1,16 @@
+[
+	{
+		"command": "changelayout"
+	},
+	{
+		"command": "goout",
+	},
+    {
+        "command": "insert_snippet",
+        "args":
+        {
+            "contents": " "
+        },
+    }
+]
+

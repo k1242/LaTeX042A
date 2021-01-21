@@ -1,5 +1,34 @@
 [
-    // { "caption": "test_command", "command": "testsettings" },
-    { "caption": "L042ATeX: start notes project", "command": "createfolder"},
-    { "caption": "L042ATeX: update SVG in project", "command": "updatesvg"},
+    { "caption": "LaTeXPhys: open keymaps folder", 
+        "command": "openfolder", 
+        "args"   : {"folder_name" : "sources/keymaps"}
+    },
+    {
+        "caption": "LaTeXPhys: open menu",
+        "command": "open_file",
+        "args": {"file": "${packages}/LaTeXPhys/Main.sublime-menu"},
+    },
+    {
+        "caption": "LaTeXPhys: open .py file",
+        "command": "open_file",
+        "args": {"file": "${packages}/LaTeXPhys/commands.py"},
+    },
+    {
+        "caption": "LaTeXPhys: open commands",
+        "command": "open_file",
+        "args": {"file": "${packages}/LaTeXPhys/Default.sublime-commands"},
+    },
+    {
+        "caption": "LaTeXPhys: open settings",
+        "command": "open_file",
+        "args": {"file": "${packages}/LaTeXPhys/LaTeXPhys.sublime-settings"},
+    },
+    {
+        "command": "globalupdate",
+        "caption": "LaTeXPhys: update resources"
+    },
+    {
+        "caption": "LaTeXPhys: test command",
+        "command": "changelayout"
+    },
 ]

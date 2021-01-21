@@ -1,0 +1,50 @@
+// start equation env
+{ "keys": ["а", "о"], "command": "run_macro_file",   //(+)
+    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_tiny_equation.sublime-macro"},
+},
+
+
+// leave equation without space
+{ "keys": [" ", " "], "command": "run_macro_file",   //(+)
+    "args": {"file": "Packages/LaTeXPhys/sources/Macros/leave_equation_v1.sublime-macro"},
+    "context":
+    [{ 
+        "key": "selector", "operator": "equal", 
+        "operand": "text.tex.latex meta.environment.math.inline" 
+    }]
+},
+
+
+// leave equation with space
+{ "keys": [" ", "enter"], "command": "run_macro_file",   //(+)
+    "args": {"file": "Packages/LaTeXPhys/sources/Macros/leave_equation_v2.sublime-macro"},
+    "context":
+    [{ 
+        "key": "selector", "operator": "equal", 
+        "operand": "text.tex.latex meta.environment.math.inline" 
+    }]
+},
+
+
+
+// ...
+{ "keys": ["у", "1"], "command": "run_macro_file",   //(+)
+    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_equation_eq_ru_eng.sublime-macro"},
+},
+{ "keys": ["e", "1"], "command": "run_macro_file",   //(+)
+    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_equation_eq_eng_eng.sublime-macro"},
+},
+
+{ "keys": ["у", "2"], "command": "run_macro_file",   //(+)
+    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_equation_al_ru_eng.sublime-macro"},
+},
+{ "keys": ["e", "2"], "command": "run_macro_file",   //(+)
+    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_equation_al_eng_eng.sublime-macro"},
+},
+
+{ "keys": ["у", "3"], "command": "run_macro_file",   //(+)
+    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_equation_ga_ru_eng.sublime-macro"},
+},
+{ "keys": ["e", "3"], "command": "run_macro_file",   //(+)
+    "args": {"file": "Packages/LaTeXPhys/sources/Macros/start_equation_ga_eng_eng.sublime-macro"},
+},

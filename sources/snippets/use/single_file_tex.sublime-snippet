@@ -1,9 +1,0 @@
-<snippet>
-    <content><![CDATA[
-ВСТАВИТЬ CONTENT
-]]></content>
-
-<tabTrigger>ъъъ</tabTrigger>
-
-<scope>text.tex.latex</scope>
-</snippet>

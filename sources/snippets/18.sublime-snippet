@@ -1,6 +1,9 @@
 <snippet><content><![CDATA[
-\overset{${1:\mathrm\{def\}}}{${2:=}} $0
+\\left\\{\begin{aligned}
+    $1
+    
+\\end{aligned}\\right.
 ]]></content>
-	<tabTrigger>ovs</tabTrigger>
+	<tabTrigger>aligned</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

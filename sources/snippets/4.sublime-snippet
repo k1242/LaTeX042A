@@ -1,7 +1,6 @@
 <snippet><content><![CDATA[
-\\hspace{0.5cm} \\overset{$1}{\\underset{\\Longrightarrow}{}} \\hspace{0.5cm} 
-$0
+\\frac{d^2 ${1:}}{d ${2:}^2} $0
 ]]></content>
-	<tabTrigger>con</tabTrigger>
+	<tabTrigger>frd2</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

@@ -1,0 +1,12 @@
+[
+	{
+		"command": "insert_snippet", 
+        "args": {"contents": 
+            "\\begin{align${1:*}}\n\t$0\n\\end{align${1:*}}"
+        }, 
+        "context": [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+	},
+]
+

@@ -1,14 +1,13 @@
 import re
-from os import listdir
 import ctypes
 from pathlib import Path
 
 snip_start = "..[["
 snip_end = "]].."
 
-prefix = str(Path(__file__).parents[0]) + "\\"
-snippets_list_path = prefix+"snippets_list.txt"
-snippets_path = prefix + "snippets\\"
+prefix = str(Path(__file__).parents[1]) + "\\"
+snippets_list_path = prefix+"settings\\snippets_list.txt"
+snippets_path = prefix + "sources\\snippets\\"
 
 preambule_1 = "<snippet><content><![CDATA[\n{}\n]]></content>\n"
 preambule_2 = "\t<tabTrigger>{}</tabTrigger>\n"
@@ -22,6 +21,7 @@ with open(snippets_list_path) as f:
     lines = f.readlines()
 
 for i in range(len(lines)):
+
     # declare triggers
     line = lines[i]
     if line[:7] == "trigger":
@@ -52,14 +52,3 @@ for (i, (trigger, snippet)) in enumerate(zip(triggers, snippets)):
             triggers_.append(trigger)
             snippets_.append(snippet)
             f.write(preambule.format(snippet, trigger))
-
-triggers = triggers_ 
-snippets = snippets_
-
-print("Всего сниппетов:", len(listdir(snippets_path))-2)
-
-
-for (i, (trigger, snippet)) in enumerate(zip(triggers, snippets)):
-    print("-{}---{}----".format(i, trigger))
-    print(snippet)
-    print()

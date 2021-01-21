@@ -1,5 +1,5 @@
 <snippet><content><![CDATA[
-\frac{\partial^2 $1}{\partial $2 \partial $3} $0
+\frac{\partial^2 $1}{\partial $2^2} $0
 ]]></content>
 	<tabTrigger>frp2</tabTrigger>
 	<scope>text.tex.latex </scope>

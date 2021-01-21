@@ -1,109 +1,63 @@
-// 
 [
     {
-        "caption": "L042ATeX",
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
         "children":
         [
-
-            {"caption":"Python",
-            "children":
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
                 [
                     {
-                        "caption": "Kill .py process",
-                        "command": "stoppython",
-                    },
-                    {
-                        "command": "open_file",
-                        "args": {
-                            "file": "${packages}/User/python_set/Default.sublime-keymap"
-                        },
-                        "caption": "ShortCuts Python"
-                    },
-                ]
-            },
-            // C++
-            {"caption": "C++",
-            "children":
-                [
-                    {
-                        "command": "open_file",
-                        "args": {
-                            "file": "${packages}/User/snippets_cpp/Default.sublime-keymap"
-                        },
-                        "caption": "ShortCuts C++"
-                    },
-                ]
-            },
-            // LaTeX
-            {"caption": "LaTeX",
-            "children":
-            [
-                {
-                    "command": "globalupdate",
-                    "caption": "Update sources"
-                },
-                {"caption":"-"}, 
-                {
-                    "caption": "Snippets",
-                    "children":
+                        "caption": "042A",
+                        "children":
                         [
-                            // {"caption": "Generate Snippets",
-                            // "command": "runpyfile",
-                            // "args": {"file_name": "snippets_generator"}
-                            // },
-                            {"caption": "Snippets List",
+                            {
                                 "command": "open_file",
+                                "args": {"file": "${packages}/LaTeX042A/README.md"},
+                                "caption": "README"
+                            },
+                            { "caption": "-" },
+                            {
+                              "caption": "Settings",
+                              "command": "open_file",
+                              "args": { "file": "${packages}/LaTeX042A/LaTeX042A.sublime-settings"} 
+                            },
+                            {
+                                "caption": "Snippets",
+                                "command": "edit_settings",
                                 "args": {
-                                    "file": "${packages}/User/L042ATeX/sources/snippets_list.txt"
+                                    "base_file": "${packages}/LaTeX042A/settings/snippets_list.txt"
                                 },
-                            }
+                            },
+                            {
+                              "caption": "Keymaps",
+                              "command": "openfolder",
+                              "args": { "folder_name": "sources/keymaps"} 
+                            },
+                            { "caption": "-" },
+                            {
+                                "caption": "Menu",
+                                "command": "open_file",
+                                "args": {"file": "${packages}/LaTeX042A/Main.sublime-menu"},
+                            },
+                            {
+                                "caption": ".py file",
+                                "command": "open_file",
+                                "args": {"file": "${packages}/LaTeX042A/commands.py"},
+                            },
+                            {
+                                "caption": "commands",
+                                "command": "open_file",
+                                "args": {"file": "${packages}/LaTeX042A/Default.sublime-commands"},
+                            },
                         ]
-                },
-                {
-                    "caption": "Keymaps",
-                    "children":
-                        [
-                            // {"caption": "Generate Keymaps",
-                            // "command": "runpyfile",
-                            // "args": {"file_name": "keymaps_generator"}
-                            // },
-                            {"caption": "Keymaps List",
-                                "command": "openkeymaps",
-                            }
-                        ]
-                },
-                {
-                    "command": "open_file",
-                    "args": {
-                        "file": "${packages}/User/L042ATeX/sources/L042ATeX.py"
-                    },
-                    "caption": ".py file"
-                },
-            ]},
-            { "caption": "-" },
-            {
-                "command": "open_file",
-                "args": {
-                    "file": "${packages}/User/L042ATeX/tasks.txt"
-                },
-                "caption": "Tasks"
-            },
-            {
-                "command": "open_file",
-                "args": {
-                    "file": "${packages}/User/L042ATeX/Main.sublime-menu"
-                },
-                "caption": "Menu"
-            },
-            { "caption": "-" },
-            {
-                "command": "open_file",
-                "args": {
-                    "file": "${packages}/User/L042ATeX/sources/plugin_generator.py"
-                },
-                "caption": "Let's start!",
+                    }
+                ]
             }
         ]
     }
 ]
-

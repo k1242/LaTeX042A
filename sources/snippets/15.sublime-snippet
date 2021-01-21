@@ -1,6 +1,6 @@
 <snippet><content><![CDATA[
-\\frac{\\partial ${1:}}{\\partial ${2:}} $0
+\underbrace{${1:}}_{${2:}}
 ]]></content>
-	<tabTrigger>frp</tabTrigger>
+	<tabTrigger>und</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

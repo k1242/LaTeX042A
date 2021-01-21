@@ -1,6 +1,6 @@
 <snippet><content><![CDATA[
-\underbrace{${1:}}_{${2:}}
+\overbrace{${1:}}_{${2:}}
 ]]></content>
-	<tabTrigger>und</tabTrigger>
+	<tabTrigger>ovb</tabTrigger>
 	<scope>text.tex.latex </scope>
 </snippet>

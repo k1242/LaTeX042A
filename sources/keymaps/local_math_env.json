@@ -1,0 +1,44 @@
+// math keymaps
+
+{ "keys": ["'", "v"], "command": "addenv", "args": {"env_name": "vc"}, "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+    ]
+},
+{ "keys": ["'", "s", "v"], "command": "addenv", "args": {"env_name": "smallvc"}, "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+    ]
+},
+{ "keys": ["'", "V"], "command": "addenv", "args": {"env_name": "vv"}, "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+    ]
+},
+{ "keys": ["'", "h"], "command": "addenv", "args": {"env_name": "hat"}, "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+    ]
+},
+{ "keys": ["'", "t"], "command": "addenv", "args": {"env_name": "tilde"}, "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+    ]
+},
+{ "keys": ["'", "b"], "command": "addenv", "args": {"env_name": "bar"}, "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+    ]
+},
+
+
+{ "keys": ["1", "d"], "command": "addenv", "args": {"env_name": "dot"}, "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+    ]
+},
+{ "keys": ["2", "d"], "command": "addenv", "args": {"env_name": "ddot"}, "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
+    ]
+},
