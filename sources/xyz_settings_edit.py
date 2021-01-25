@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 package_name = "LaTeX042A"
 required_setting = '"use_latex_quotes": false'
@@ -15,6 +16,8 @@ def find_last_match(s, p):
     if flag: i = -1
 
     return i
+
+if not os.path.exists(file): open(file, "w").close()
 
 with open(file, "r") as f:
     lines = f.readlines()
