@@ -44,7 +44,7 @@ The package is a set of plugins, snippets and shotcuts for simplifying using LaT
  <kbd>у</kbd>, <kbd>3</kbd> | <kbd>e</kbd>, <kbd>3</kbd>| ```gather```
  
  
- ## Snippets
+ ## Snippets (нужны ли?)
 
 Изначально в [Sublime Text 3](https://www.sublimetext.com/) для каждого сниппета необходимо создавать отдельный файл. Этот пакет исправляет это недоразумение. 
 Теперь достаточно через <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> и выполнить ```LaTex042A: edit snippets```. Откроется файл, где слева будут представлены пакетные сниппеты, а справа возможность написать что-то своё.
@@ -67,7 +67,7 @@ Trigger | Snippet
     ${4:0} & ${6:0} & ${7:0} \\  
 \end{${1:p/b/v/V/B/}matrix}
 ```
-Выглядит, возможно, немнго дико, но на деле очень удобно.
+Выглядит, возможно, немного дико, но на деле очень удобно.
 
 ...
 

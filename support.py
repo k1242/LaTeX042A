@@ -29,3 +29,4 @@ class Globalupdate(sublime_plugin.TextCommand):
     def run(self, edit):
         Runpyfile.run(self, edit, "snippets_generator")
         Runpyfile.run(self, edit, "keymaps_generator")
+        Runpyfile.run(self, edit, "xyz_settings_edit")
