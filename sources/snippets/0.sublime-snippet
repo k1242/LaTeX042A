@@ -1,5 +1,5 @@
 <snippet><content><![CDATA[
-\\frac{$1}{$2} $0
+\\frac{$1}{$2}
 ]]></content>
 	<tabTrigger>fr</tabTrigger>
 	<scope>text.tex.latex </scope>

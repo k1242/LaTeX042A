@@ -63,17 +63,6 @@
 	},
 	
 	
-	// leave equation with space
-	{ "keys": [" ", "enter"], "command": "run_macro_file",   //(+)
-	    "args": {"file": "Packages/LaTeX042A/sources/Macros/leave_equation_v2.sublime-macro"},
-	    "context":
-	    [{ 
-	        "key": "selector", "operator": "equal", 
-	        "operand": "text.tex.latex meta.environment.math.inline" 
-	    }]
-	},
-	
-	
 	
 	// ...
 	{ "keys": ["у", "1"], "command": "run_macro_file",   //(+)

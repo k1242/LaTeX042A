@@ -1,0 +1,62 @@
+[
+    // { "caption": "LaTeX042A: open keymaps folder", 
+    //     "command": "openfolder", 
+    //     "args"   : {"folder_name" : "sources/keymaps"}
+    // },
+    {
+        "caption": "tmp_042A: open menu",
+        "command": "open_file",
+        "args": {"file": "${packages}/LaTeX042A/support/Main.sublime-menu"},
+    },
+    {
+        "caption": "tmp_042A: open .py file",
+        "command": "open_file",
+        "args": {"file": "${packages}/LaTeX042A/support.py"},
+    },
+    {
+        "caption": "tmp_042A: open commands",
+        "command": "open_file",
+        "args": {"file": "${packages}/LaTeX042A/support/Default.sublime-commands"},
+    },
+    // {
+    //     "caption": "LaTeX042A: open settings",
+    //     "command": "open_file",
+    //     "args": {"file": "${packages}/LaTeX042A/support/LaTeX042A.sublime-settings"},
+    // },
+    {
+        "caption": "LaTeX042A: open keymaps compiled file",
+        "command": "open_file",
+        "args": {"file": "${packages}/LaTeX042A/support/Default.sublime-keymap"},
+    },
+    {
+        "command": "globalupdate",
+        "caption": "LaTeX042A: update resources"
+    },
+    // {
+    //     "caption": "LaTeX042A: change layout",
+    //     "command": "changelayout"
+    // },
+    {
+        "caption": "LaTeX042A: edit snippets",
+        "command": "edit_snippets"
+    },
+    // {
+    //     "caption": "LaTeX042A: edit keymaps",
+    //     "command": "edit_keymaps"
+    // },
+    {
+        "caption": "tmp_042A: test",
+        "command": "edit_snippets",   
+    },
+    // {
+    //     "caption": "LaTeX042A: show settings",
+    //     "command": "showsettings"
+    // },
+    {
+        "caption": "LaTeX042A: edit settings", //(+)
+        "command": "edit_settings",
+        "args": {
+            "base_file": "${packages}/LaTeX042A/support/LaTeX042A.sublime-settings"
+      }
+    },
+]

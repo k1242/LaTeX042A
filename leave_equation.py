@@ -4,7 +4,7 @@ import os
 
 package_name = "LaTeX042A"
 
-env_names_list = ["align", "align*", 
+env_names_list = ["align", "align*",
                   "equation", "equation*",
                   "gather", "gather*"]
 
@@ -47,13 +47,9 @@ class GooutCommand(sublime_plugin.TextCommand):
                               skip + "$$\n")
 
 
-
-
 class Changelayout(sublime_plugin.TextCommand):
     def run(self, edit):
         path_change_layout = "{}/{}/sources/vbs/change_layout.vbs".format(
             sublime.packages_path(), package_name)
         print(path_change_layout)
         os.startfile(path_change_layout)
-
-

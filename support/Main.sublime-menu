@@ -42,7 +42,7 @@
                             {
                                 "caption": "Menu",
                                 "command": "open_file",
-                                "args": {"file": "${packages}/LaTeX042A/Main.sublime-menu"},
+                                "args": {"file": "${packages}/LaTeX042A/support/Main.sublime-menu"},
                             },
                             {
                                 "caption": ".py file",
@@ -52,7 +52,7 @@
                             {
                                 "caption": "commands",
                                 "command": "open_file",
-                                "args": {"file": "${packages}/LaTeX042A/Default.sublime-commands"},
+                                "args": {"file": "${packages}/LaTeX042A/support/Default.sublime-commands"},
                             },
                         ]
                     }

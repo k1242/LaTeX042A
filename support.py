@@ -3,7 +3,7 @@ import sublime_plugin
 import os
 
 package_name = "LaTeX042A"
-lz_settings_file = "LaTeXPhys.sublime-settings"
+lz_settings_file = "LaTeX042A.sublime-settings"
 
 
 # open folder
@@ -29,28 +29,3 @@ class Globalupdate(sublime_plugin.TextCommand):
     def run(self, edit):
         Runpyfile.run(self, edit, "snippets_generator")
         Runpyfile.run(self, edit, "keymaps_generator")
-
-
-# test settings file
-class Testсommand(sublime_plugin.TextCommand):
-    def run(self, edit):
-        # settings = sublime.load_settings(lz_settings_file)
-        # t1 = settings.get("test_var_false")
-        # t2 = settings.get("test_var_true")
-        # print(t1)
-        # print(t2)
-        os.system("tasklist")
-
-
-
-
-
-
-
-
-
-
-
-
-
-

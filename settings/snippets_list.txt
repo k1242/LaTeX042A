@@ -9,12 +9,10 @@
 
 ----- FRACS -----
 
-
 trigger: fr
                                                 ..[[
-\\frac{$1}{$2} $0
+\\frac{$1}{$2}
                                                 ]]..
-
 
 trigger: frp
                                                 ..[[
