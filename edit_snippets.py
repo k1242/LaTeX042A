@@ -37,6 +37,8 @@ class Edit_keymaps(sublime_plugin.WindowCommand):
 
         file_path = "{}/User/{}".format(sublime.packages_path(), package_name)
         file_name = file_path + "/keymaps.json"
+        default_file_name = "{}/{}/support/Default.sublime-keymap".format(
+            sublime.packages_path(), package_name)
 
         if not os.path.exists(file_path):
             os.mkdir(file_path)
@@ -45,7 +47,16 @@ class Edit_keymaps(sublime_plugin.WindowCommand):
             open(file_name, "a").close()
             print("042A: created user's keymaps file")
 
-        self.window.open_file(file_name)
+        self.window.run_command("new_window")
+        new_window = sublime.windows()[-1]
+        new_window.open_file(default_file_name)
+        new_window.run_command("set_layout",
+                               {
+                                   "cells": [[0, 0, 1, 1], [1, 0, 2, 1]],
+                                   "cols": [0.0, 0.5, 1.0],
+                                   "rows": [0.0, 1.0]
+                               })
+        new_window.open_file(file_name)
 
 
 # self.window.status_message("042A: test status message")

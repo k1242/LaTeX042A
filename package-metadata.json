@@ -1,1 +1,1 @@
-{"version": "0.3.1", "platforms": ["Windows"], "url": "https://github.com/k1242/LaTeX042A", "sublime_text": "*", "dependencies": [], "description": "Ability to take notes following the lecturer."}
+{"url": "https://github.com/k1242/LaTeX042A", "version": "2021.01.25.12.55.57", "dependencies": [], "platforms": ["*"], "sublime_text": "*", "description": "Ability to take notes in LaTeX following the lecturer."}

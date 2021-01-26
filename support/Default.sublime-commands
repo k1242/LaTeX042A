@@ -40,6 +40,10 @@
         "caption": "LaTeX042A: edit snippets",
         "command": "edit_snippets"
     },
+    {
+        "caption": "LaTeX042A: edit keymaps",
+        "command": "edit_keymaps"
+    },
     // {
     //     "caption": "LaTeX042A: edit keymaps",
     //     "command": "edit_keymaps"
