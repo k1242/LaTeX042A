@@ -189,8 +189,11 @@ class Openfolder(sublime_plugin.TextCommand):
 
 
 # update keymaps and snippets list
-class Globalupdate(sublime_plugin.TextCommand):
-    def run(self, edit):
+class Globalupdate(sublime_plugin.WindowCommand):
+    def run(self):
+
         generate_snippets()
         generate_keymaps()
         xyz_settings_edit()
+
+        self.window.status_message("042A: recources updated")
