@@ -1,7 +1,5 @@
 # LaTeX042A (LaTeXЪ)
 
-The package is a set of plugins, snippets and shotcuts for simplifying using LaTeX for users writing text in Russian. Templates and snippets targeting specially for Russian. Russian users could begin special environments, commands, etc. using Russian layout.
-
 ## Дисклеймер
 Этот пакет не для замены какого либо другого LaTeX пакета. Он предназначен для использования совместно с [LaTeXTools](https://github.com/SublimeText/LaTeXTools) и [LaTeXYZ](https://github.com/randy3k/LaTeXYZ) и возвышения процесса ввода в [Sublime Text 3](https://www.sublimetext.com/) до уровня комфортной прогулки по давно близкому душе парку. 
 Мотивацией к написанию нижеизложенного послужили непреодолимая лень автора и дихотомия раскладки клавиатуры.
@@ -33,6 +31,9 @@ The package is a set of plugins, snippets and shotcuts for simplifying using LaT
 <kbd>2</kbd>, <kbd>d</kbd> | ```x``` → ```\ddot{x}```
 
 Теперь начать внутристрочное уравнение можно следующим образом (после нажатия клавиш __язык автоматически переключится__):
+
+![](gifs/ao.gif)
+
  Keys | Action
 -----|------
  <kbd>а</kbd>, <kbd>о</kbd> | *смена языка* **и** ```$↓$```
