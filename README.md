@@ -20,6 +20,9 @@ The package is a set of plugins, snippets and shotcuts for simplifying using LaT
 ## Keymaps 
 
 Добавлена возможность оборачивать предстоящее слово с соответствующую среду:
+
+![](gifs/frp_env.gif)
+
  Keys | Action
 -----|------
 <kbd>'</kbd>, <kbd>t</kbd> | ```x``` → ```\tilde{x}```
