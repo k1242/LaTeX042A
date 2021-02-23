@@ -1,6 +1,10 @@
 // start equation env
 { "keys": ["а", "о"], "command": "run_macro_file",   //(+)
     "args": {"file": "Packages/LaTeX042A/sources/Macros/start_tiny_equation.sublime-macro"},
+    "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+    ]
 },
 
 
@@ -19,21 +23,45 @@
 // ...
 { "keys": ["у", "1"], "command": "run_macro_file",   //(+)
     "args": {"file": "Packages/LaTeX042A/sources/Macros/start_equation_eq_ru_eng.sublime-macro"},
+    "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+    ]
 },
 { "keys": ["e", "1"], "command": "run_macro_file",   //(+)
     "args": {"file": "Packages/LaTeX042A/sources/Macros/start_equation_eq_eng_eng.sublime-macro"},
+    "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+    ]
 },
 
 { "keys": ["у", "2"], "command": "run_macro_file",   //(+)
     "args": {"file": "Packages/LaTeX042A/sources/Macros/start_equation_al_ru_eng.sublime-macro"},
+    "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+    ]
 },
 { "keys": ["e", "2"], "command": "run_macro_file",   //(+)
     "args": {"file": "Packages/LaTeX042A/sources/Macros/start_equation_al_eng_eng.sublime-macro"},
+    "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+    ]
 },
 
 { "keys": ["у", "3"], "command": "run_macro_file",   //(+)
     "args": {"file": "Packages/LaTeX042A/sources/Macros/start_equation_ga_ru_eng.sublime-macro"},
+    "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+    ]
 },
 { "keys": ["e", "3"], "command": "run_macro_file",   //(+)
     "args": {"file": "Packages/LaTeX042A/sources/Macros/start_equation_ga_eng_eng.sublime-macro"},
+    "context":
+    [
+        { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+    ]
 },
