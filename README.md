@@ -1,7 +1,5 @@
 # LaTeX042A (LaTeXЪ)
 
-The package is a set of plugins, snippets and shotcuts for simplifying using LaTeX for users writing text in Russian. Templates and snippets targeting specially for Russian. Russian users could begin special environments, commands, etc. using Russian layout.
-
 ## Дисклеймер
 Этот пакет не для замены какого либо другого LaTeX пакета. Он предназначен для использования совместно с [LaTeXTools](https://github.com/SublimeText/LaTeXTools) и [LaTeXYZ](https://github.com/randy3k/LaTeXYZ) и возвышения процесса ввода в [Sublime Text 3](https://www.sublimetext.com/) до уровня комфортной прогулки по давно близкому душе парку. 
 Мотивацией к написанию нижеизложенного послужили непреодолимая лень автора и дихотомия раскладки клавиатуры.
@@ -33,6 +31,9 @@ The package is a set of plugins, snippets and shotcuts for simplifying using LaT
 <kbd>2</kbd>, <kbd>d</kbd> | ```x``` → ```\ddot{x}```
 
 Теперь начать внутристрочное уравнение можно следующим образом (после нажатия клавиш __язык автоматически переключится__):
+
+![](gifs/ao.gif)
+
  Keys | Action
 -----|------
  <kbd>а</kbd>, <kbd>о</kbd> | *смена языка* **и** ```$↓$```
@@ -71,5 +72,21 @@ Trigger | Snippet
 \end{${1:p/b/v/V/B/}matrix}
 ```
 Выглядит, возможно, немного дико, но на деле очень удобно.
+
+## Создание своих сниппетов и автозамен
+
+В пакете есть несколько встроенных функций, доступных по <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd>, позволяющих вам этот пакет менять и дополнять.
+* ```LaTeX042A: update resources``` -- после этой команды обновляются снипеты, автозамены и подстраиваются настройки LaTeXYZ, чтобы не было конфликтов. 
+Что-то поменяли в пакете -- запускайте эту команду. Если ничего не работает, то попробуйте ещё раз запустить эту команду.
+* ```LaTeX042A: edit keymaps``` -- открывает два файла: в правый файл вы можете написать автозамены по образу и подобию левого файла (его редактировать не нужно, -- это автозамены пакета). Автозамены наснут работать после исполнения ```LaTeX042A: update resources```.
+* ```LaTeX042A: edit snippets``` -- аналогично открывает два файла со сниппетами, правый для вас. По "snip" + <kbd>Tab</kbd> вставится заготовка для сниппета. 
+После  ```LaTeX042A: update resources``` всё заработает.
+* ```LaTeX042A: edit settings``` -- если вас вруг утомили родные автозамены или сниппеты пакета, -- в настройках их можно отключить 
+(также изменением правого файла).
+
+
+
+
+
 
 
