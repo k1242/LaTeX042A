@@ -1,0 +1,1 @@
+xte 'keydown Alt_L' 'key Shift_L' 'keyup Alt_L'

@@ -1,6 +1,7 @@
 import sublime
 import sublime_plugin
 import os
+import sys, subprocess
 
 package_name = "LaTeX042A"
 
@@ -49,7 +50,11 @@ class GooutCommand(sublime_plugin.TextCommand):
 
 class Changelayout(sublime_plugin.TextCommand):
     def run(self, edit):
-        path_change_layout = "{}/{}/sources/vbs/change_layout.vbs".format(
-            sublime.packages_path(), package_name)
-        print(path_change_layout)
-        os.startfile(path_change_layout)
+        if sys.platform == "win32":
+            path_change_layout = "{}/{}/sources/vbs/change_layout.vbs".format(
+                sublime.packages_path(), package_name)
+            os.startfile(path_change_layout)
+        else:
+            path_change_layout = "{}/{}/sources/sh/lang_shift.sh".format(
+                sublime.packages_path(), package_name)
+            subprocess.call(["open", path_change_layout])
