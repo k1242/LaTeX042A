@@ -51,10 +51,12 @@ class GooutCommand(sublime_plugin.TextCommand):
 class Changelayout(sublime_plugin.TextCommand):
     def run(self, edit):
         if sys.platform == "win32":
+            # sublime.windows[-1].status_message("windows shift+alt")
             path_change_layout = "{}/{}/sources/vbs/change_layout.vbs".format(
                 sublime.packages_path(), package_name)
             os.startfile(path_change_layout)
         else:
+            # sublime.windows[-1].status_message("oher platform shift+alt")
             path_change_layout = "{}/{}/sources/sh/lang_shift.sh".format(
                 sublime.packages_path(), package_name)
-            subprocess.call(["open", path_change_layout])
+            subprocess.call(["sh", path_change_layout])
